@@ -1,0 +1,62 @@
+.experiences {
+    padding: 5px;
+    height: auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--dark-text-color);
+  }
+  
+  .experience-title {
+    font-size: clamp(12px, 1vw, 15px);
+    font-weight: 700;
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 5px;
+  }
+  
+  .experience-info {
+    text-align: center;
+  }
+  
+  .experience-info p {
+    font-size: clamp(10px, 1vw, 12px);
+    margin: 2px;
+  }
+  
+  .experience-detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .experience-description {
+    text-align: justify;
+    margin-top: 10px;
+    font-size: clamp(10px, 1vw, 12px);
+    line-height: 25px;
+  }
+
+  @media only screen and (max-width: 800px) {
+    .experience-wide-screen {
+      display: none;
+    }
+  
+    .experiences-content {
+      border-bottom: 1px solid var(--lighter-gray);
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .divider {
+        border: 1px solid var(--folder-outer-color);
+      }
+  }
+  
+  @media only screen and (min-width: 800px) {
+    .experience-small-screen {
+      display: none;
+    }
+  }

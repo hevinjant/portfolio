@@ -1,8 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../styles/Folder.css";
+import About from "./About";
+import Education from "./Education";
+import Projects from "./Projects";
+import Experience from "./Experience";
+import Other from "./Other";
 
 function Folder() {
-  const tabs = ["About", "Education", "Projects", "Experiences", "Resume"];
+  const tabs = ["ABOUT", "PROJECTS", "EXPERIENCES", "CONNECT"];
 
   const containerRef = useRef<HTMLDivElement>(null);
   const [containerWidth, setContainerWidth] = useState<number>(0);
@@ -40,7 +45,11 @@ function Folder() {
       />
       <div ref={containerRef} className="folder-container">
         <div className="folder-content">
-          {containerWidth}x{containerHeight}
+          {activeTab === "ABOUT" && <About />}
+          {/* {activeTab === "Education" && <Education />} */}
+          {activeTab === "PROJECTS" && <Projects />}
+          {activeTab === "EXPERIENCES" && <Experience />}
+          {activeTab === "CONNECT" && <Other />}
         </div>
       </div>
     </div>
@@ -85,6 +94,7 @@ function FolderTabs({
       <div className="tabs-container">
         {tabs.map((tab) => (
           <button
+            key={tab}
             onClick={() => setActiveTab(tab)}
             className={`folder-tab ${activeTab === tab ? "active" : ""}`}
             style={{ width: `${tabWidth - 2}px` }}
@@ -96,6 +106,7 @@ function FolderTabs({
       <div className="tabs-container-mobile">
         {tabs.map((tab) => (
           <button
+            key={tab}
             onClick={() => setActiveTab(tab)}
             className={`folder-tab ${activeTab === tab ? "active" : ""}`}
             style={{ height: `${tabHeight - 2}px` }}

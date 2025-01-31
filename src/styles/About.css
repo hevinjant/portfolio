@@ -1,0 +1,27 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+}
+
+.about-pic {
+  opacity: 0.8;
+  object-fit: cover;
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+}
+
+.about-text {
+    font-size: clamp(10px, 1.2vw, 15px);
+    text-align: justify;
+    color: var(--dark-text-color);
+    width: 80%;
+}
+
+@media only screen and (max-width: 700px) {
+  .about-text {
+    width: 100%;
+  }
+}
