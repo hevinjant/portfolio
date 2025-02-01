@@ -2,6 +2,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import DownloadIcon from "@mui/icons-material/Download";
 // import EmailIcon from "@mui/icons-material/Email";
+import Resume from "../assets/HevinJantasmin_Resume_January2025.pdf";
 import "../styles/Other.css";
 
 export default function Other() {
@@ -13,7 +14,7 @@ export default function Other() {
       <a href="https://www.linkedin.com/in/hevinjant/" target="_blank">
         <LinkedInIcon /> LinkedIn
       </a>
-      <a href="" download>
+      <a href={Resume} download>
         <DownloadIcon />
         Download my resume here
       </a>
