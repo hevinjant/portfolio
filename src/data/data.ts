@@ -113,6 +113,13 @@ export const baseURL = {
       location: "New York City, NY",
       interval: "April 2023 - May 2024",
       description: "Analyzing, troubleshooting, and providing technical support for various IT solutions and networks. Enhancing operational workflow by automating repetitive tasks. Developing web application to streamline and automate the process of tracking and managing employee attendance."
+    },
+    {
+      title: "IT Associate",
+      company: "Bazic Products",
+      location: "El Monte, CA",
+      interval: "June 2024 - Present",
+      description: ""
     }
   ];
   
