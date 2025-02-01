@@ -6,7 +6,7 @@ export default function Projects() {
   return (
     <div className="projects">
       <div className="project-list">
-        {myProjects.map((project: any, key: string) => {
+        {myProjects.map((project: any, key: any) => {
           return (
             <ProjectItem
               key={key}

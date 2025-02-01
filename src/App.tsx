@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Folder from "./components/Folder";
 import "./App.css";
 

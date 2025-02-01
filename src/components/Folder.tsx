@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../styles/Folder.css";
 import About from "./About";
-import Education from "./Education";
+// import Education from "./Education";
 import Projects from "./Projects";
 import Experience from "./Experience";
 import Other from "./Other";
