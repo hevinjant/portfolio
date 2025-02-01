@@ -5,6 +5,12 @@ export const baseURL = {
   
   export const myProjects = [
     {
+      name: "Portfolio Website - 2",
+      description:
+        "Developed portfolio website using React TypeScript and Material UI. Hosted on GitHub Pages.",
+      url: "https://github.com/hevinjant/portfolio",
+    },
+    {
       name: "Spottem - Music Based Social Media",
       description:
         "Developed a web application social media based on music. Using Spotify API and Spotify OAuth to access user’s personal information and songs. Developed with React JavaScript, and Python Flask. The web application is deployed to Heroku and the data is managed using Atlas MongoDB database.",
@@ -26,7 +32,7 @@ export const baseURL = {
     {
       name: "Portfolio Website",
       description:
-        "Developed portfolio website using React JavaScript and styled with CSS. Hosted by GitHub Pages.",
+        "Developed portfolio website using React JavaScript and styled with CSS. Hosted on GitHub Pages.",
       url: "https://github.com/hevinjant/my-portfolio-website",
     },
     {
