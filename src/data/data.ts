@@ -1,9 +1,23 @@
+export type ProjectEntryType = {
+  name: string;
+  description: string;
+  url: string;
+}
+
+export type ExperienceEntryType = {
+  title: string;
+  company: string;
+  location: string;
+  interval: string;
+  description: string;
+}
+
 export const baseURL = {
-    local: "http://localhost:3000/",
-    deployed: "https://hevinjant.github.io/my-portfolio-website/",
+    local: "http://localhost:5173/",
+    deployed: "https://hevinjant.github.io/my-portfolio/",
   };
   
-  export const myProjects = [
+  export const myProjects : ProjectEntryType[] = [
     {
       name: "Portfolio Website - 2",
       description:
@@ -55,7 +69,7 @@ export const baseURL = {
     },
   ];
   
-  const myExperiences = [
+  const myExperiences:ExperienceEntryType[] = [
     {
       title: "Programming Tutor and Office Assistant",
       company:

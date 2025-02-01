@@ -1,15 +1,16 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { myProjects } from "../data/data.ts";
+import { ProjectEntryType } from "../data/data.ts";
 import "../styles/Projects.css";
 
 export default function Projects() {
   return (
     <div className="projects">
       <div className="project-list">
-        {myProjects.map((project: any, key: any) => {
+        {myProjects.map((project: ProjectEntryType) => {
           return (
             <ProjectItem
-              key={key}
+              key={project.name}
               name={project.name}
               description={project.description}
               url={project.url}
