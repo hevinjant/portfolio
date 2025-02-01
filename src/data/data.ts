@@ -119,7 +119,7 @@ export const baseURL = {
       company: "Bazic Products",
       location: "El Monte, CA",
       interval: "June 2024 - Present",
-      description: ""
+      description: "Developed software to automate warehouse operation in batching orders. Developed and customized BigCommerce B2C and B2B platform. Customizing company's B2C Shopify Ecommerce platform. Analyzing, troubleshooting, and providing technical support for various IT solutions and networks."
     }
   ];
   
