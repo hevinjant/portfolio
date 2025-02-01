@@ -7,7 +7,7 @@ import TimelineDot from "@mui/lab/TimelineDot";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import ApartmentIcon from "@mui/icons-material/Apartment";
-import { reversedMyExperiences } from "../data/data";
+import { reversedMyExperiences } from "../data/data.ts";
 import "../styles/Experience.css";
 
 export default function Experience() {

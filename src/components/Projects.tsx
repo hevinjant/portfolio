@@ -1,5 +1,5 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
-import { myProjects } from "../data/data";
+import { myProjects } from "../data/data.ts";
 import "../styles/Projects.css";
 
 export default function Projects() {

@@ -1,6 +1,6 @@
 import myPic from "../assets/myPic.jpg";
 import "../styles/About.css";
-import { aboutMe } from "../data/data";
+import { aboutMe } from "../data/data.ts";
 
 export default function About() {
   return (
