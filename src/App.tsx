@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="app">
       <Folder />
-      <p className="version-text">version 0.0.2</p>
+      <p className="version-text">version 0.0.3</p>
     </div>
   );
 }
