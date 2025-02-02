@@ -5,6 +5,7 @@ import About from "./About";
 import Projects from "./Projects";
 import Experience from "./Experience";
 import Other from "./Other";
+import { useSessionStorage } from "../custom_hooks/useSessionStorage";
 
 function Folder() {
   const tabs = ["ABOUT", "PROJECTS", "EXPERIENCES", "CONNECT"];
@@ -12,7 +13,7 @@ function Folder() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [containerWidth, setContainerWidth] = useState<number>(0);
   const [containerHeight, setContainerHeight] = useState<number>(0);
-  const [activeTab, setActiveTab] = useState<string | null>(tabs[0]);
+  const [activeTab, setActiveTab] = useSessionStorage("active_tab", tabs[0]);
 
   useEffect(() => {
     // for initial load
