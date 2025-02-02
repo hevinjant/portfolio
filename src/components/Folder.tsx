@@ -13,7 +13,10 @@ function Folder() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [containerWidth, setContainerWidth] = useState<number>(0);
   const [containerHeight, setContainerHeight] = useState<number>(0);
-  const [activeTab, setActiveTab] = useSessionStorage("active_tab", tabs[0]);
+  const [activeTab, setActiveTab] = useSessionStorage<string>(
+    "active_tab",
+    tabs[0]
+  );
 
   useEffect(() => {
     // for initial load
@@ -41,8 +44,10 @@ function Folder() {
         tabs={tabs}
         containerWidth={containerWidth}
         containerHeight={containerHeight}
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
+        activeTab={activeTab as string}
+        setActiveTab={
+          setActiveTab as React.Dispatch<React.SetStateAction<string>>
+        }
       />
       <div ref={containerRef} className="folder-container">
         <div className="folder-content">
@@ -61,8 +66,8 @@ type FolderTabsProps = {
   tabs: string[];
   containerWidth: number;
   containerHeight: number;
-  activeTab: string | null;
-  setActiveTab: React.Dispatch<React.SetStateAction<string | null>>;
+  activeTab: string;
+  setActiveTab: React.Dispatch<React.SetStateAction<string>>;
 };
 
 function FolderTabs({

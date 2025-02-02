@@ -1,11 +1,8 @@
 import { useState, useEffect } from "react";
 
-export function useSessionStorage(
-  key: string,
-  defaultValue: string | null = null
-) {
-  const [value, setValue] = useState<string | null>(() => {
-    const savedValue = sessionStorage.getItem(key);
+export function useSessionStorage<T>(key: T, defaultValue: T | null) {
+  const [value, setValue] = useState<T>(() => {
+    const savedValue = sessionStorage.getItem(key as string);
     if (savedValue) {
       return JSON.parse(savedValue);
     }
@@ -14,7 +11,7 @@ export function useSessionStorage(
 
   useEffect(() => {
     const rawValue = JSON.stringify(value);
-    sessionStorage.setItem(key, rawValue);
+    sessionStorage.setItem(key as string, rawValue);
   }, [value]);
 
   return [value, setValue];
