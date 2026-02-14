@@ -140,11 +140,18 @@ export const baseURL = {
       location: "El Monte, CA",
       interval: "June 2024 - Present",
       description: "Developed software to automate warehouse operation in batching orders. Developed and customized BigCommerce B2C and B2B platform. Customizing company's B2C Shopify Ecommerce platform. Analyzing, troubleshooting, and providing technical support for various IT solutions and networks."
-    }
+    },
+    {
+      title: "Information Security Staff",
+      company: "PT Bank BNI New York Agency",
+      location: "New York City, NY",
+      interval: "February 2025 - Present",
+      description: "Developed an application to process and translate SWIFT MT messages into ISO 20022 MX and Fed ISO 20022 formats. Supporting information security operations by monitoring systems, identifying risks, and assisting with the implementation of security controls and regulatory requirements."
+    },
   ];
   
   export const reversedMyExperiences = myExperiences.reverse();
   
   export const aboutMe =
-    "Hello, there! My name is Hevin Jantasmin. I’m a fresh graduate who is passionate about coding and software development. I’m currently focusing on web development in the front-end as well as the back-end and databases. I’m eager to learn about new things and grow in the field of software development. I received my Bachelor's degree in Computer Science from Cal Poly SLO and have already gained some experience through internships, works, and personal projects.";
+    "Hello! My name is Hevin Jantasmin. I’m someone who is passionate about building things, coding, and software development. I’m currently focusing on web development in the front-end as well as the back-end and databases. I’m eager to learn about new things and grow in the field of software development. I received my Bachelor's degree in Computer Science from Cal Poly SLO and have already gained some experience through internships, works, and personal projects.";
   
