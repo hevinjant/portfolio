@@ -153,5 +153,5 @@ export const baseURL = {
   export const reversedMyExperiences = myExperiences.reverse();
   
   export const aboutMe =
-    "Hello! My name is Hevin Jantasmin. I’m someone who is passionate about building things, coding, and software development. I’m currently focusing on web development in the front-end as well as the back-end and databases. I’m eager to learn about new things and grow in the field of software development. I received my Bachelor's degree in Computer Science from Cal Poly SLO and have already gained some experience through internships, works, and personal projects.";
+    "Hello! I'm Hevin. I'm passionate about building things, coding, and software development. I'm currently focused on web development, including front-end, back-end, and database work. I'm always eager to learn new technologies and continue growing in the field of software development. I received my Bachelor's degree in Computer Science from Cal Poly San Luis Obispo and have gained experience through internships, work, and personal projects.";
   
