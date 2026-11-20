@@ -1,16 +1,27 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  min-height: 100vh;
+  --folder-outer-color: #f2c94c;
+  --folder-inner-color: #fff3b0;
+  --folder-shadow: #b69020;
+  --dark-text-color: #252722;
+  --medium-text-color: #65685d;
+  --hover-color: #176b61;
+  --accent-color: #c6533c;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px 18px;
   text-align: center;
-  --folder-outer-color: #F8D775;
-  --folder-inner-color: #FFE9A2;
-  --dark-text-color: #242424;
-  --medium-text-color: #2f2f2f;
-  --hover-color: #0077b6;
 }
 
 .version-text {
-  font-size: 11px;
-  color: var(--medium-text-color);
+  margin: 14px 0 0;
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  color: #686c61;
 }

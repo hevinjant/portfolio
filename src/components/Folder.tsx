@@ -12,7 +12,6 @@ function Folder() {
 
   const containerRef = useRef<HTMLDivElement>(null);
   const [containerWidth, setContainerWidth] = useState<number>(0);
-  const [containerHeight, setContainerHeight] = useState<number>(0);
   const [activeTab, setActiveTab] = useSessionStorage<string>(
     "active_tab",
     tabs[0]
@@ -22,13 +21,11 @@ function Folder() {
     // for initial load
     if (containerRef.current) {
       setContainerWidth(containerRef.current.offsetWidth);
-      setContainerHeight(containerRef.current.offsetHeight);
     }
 
     const getWidthAndHeightListener = () => {
       if (containerRef.current) {
         setContainerWidth(containerRef.current.offsetWidth);
-        setContainerHeight(containerRef.current.offsetHeight);
       }
     };
 
@@ -40,17 +37,25 @@ function Folder() {
 
   return (
     <div className="folder">
-      <FolderTabs
-        tabs={tabs}
-        containerWidth={containerWidth}
-        containerHeight={containerHeight}
-        activeTab={activeTab as string}
-        setActiveTab={
-          setActiveTab as React.Dispatch<React.SetStateAction<string>>
-        }
-      />
+      <div className="folder-top">
+        <header className="portfolio-header" aria-label="Portfolio identity">
+          <div>
+            <p className="portfolio-kicker">Portfolio archive</p>
+            <h1>HEVIN JANTASMIN</h1>
+          </div>
+          <span className="archive-mark">HJ / 2026</span>
+        </header>
+        <FolderTabs
+          tabs={tabs}
+          containerWidth={containerWidth}
+          activeTab={activeTab as string}
+          setActiveTab={
+            setActiveTab as React.Dispatch<React.SetStateAction<string>>
+          }
+        />
+      </div>
       <div ref={containerRef} className="folder-container">
-        <div className="folder-content">
+        <div key={activeTab as string} className="folder-content">
           {activeTab === "ABOUT" && <About />}
           {/* {activeTab === "Education" && <Education />} */}
           {activeTab === "PROJECTS" && <Projects />}
@@ -65,7 +70,6 @@ function Folder() {
 type FolderTabsProps = {
   tabs: string[];
   containerWidth: number;
-  containerHeight: number;
   activeTab: string;
   setActiveTab: React.Dispatch<React.SetStateAction<string>>;
 };
@@ -73,7 +77,6 @@ type FolderTabsProps = {
 function FolderTabs({
   tabs,
   containerWidth,
-  containerHeight,
   activeTab,
   setActiveTab,
 }: FolderTabsProps) {
@@ -83,17 +86,9 @@ function FolderTabs({
     containerWidth / numberOfTabs
   );
 
-  const [tabHeight, setTabHeight] = useState<number>(
-    containerHeight / numberOfTabs
-  );
-
   useEffect(() => {
     setTabWidth(containerWidth / numberOfTabs);
   }, [containerWidth]);
-
-  useEffect(() => {
-    setTabHeight(containerHeight / numberOfTabs);
-  }, [containerHeight]);
 
   return (
     <>
@@ -115,7 +110,6 @@ function FolderTabs({
             key={tab}
             onClick={() => setActiveTab(tab)}
             className={`folder-tab ${activeTab === tab ? "active" : ""}`}
-            style={{ height: `${tabHeight - 2}px` }}
           >
             <div className="folder-tab-title">{tab}</div>
           </button>
